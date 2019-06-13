@@ -1,0 +1,39 @@
+def alphabet_group_menu():
+
+    alphabet_group1 = ["A", "B", "C", "D", "E", "F", "G"]
+    alphabet_group2 = ["H", "I", "K", "L", "M", "N", "O", "P"]
+    alphabet_group3 = ["Q", "R", "S"]
+    alphabet_group4 = ["T", "U", "V"]
+    alphabet_group5 = ["W", "X"]
+    alphabet_group6 = ["Y", "Z"]
+
+    print ("""
+        [1] - A-G 
+        [2] - H-P 
+        [3] - Q-S 
+        [4] - T-V 
+        [5] - W,X 
+        [6] - Y,Z 
+        """)
+    action = input("Which of the Alphabet groups would you like to practice? ")
+
+def random_alphabet_group():
+
+    print("A random letter will be generated from the group of letters you have selected. Select the correct letter from the platform")
+    for letter in alphabet_group(action):
+        RAG = random.choice(alphabet_group(action))
+        print(RAG)
+        answer_RAG = input("Select the letter that appears on the screen: ")
+        while RAG != answer_RAG:
+            print("Try again!")
+            answer_RAG = input("Enter the correct letter again:")
+            # continue
+        print("Good job!")
+        continue
+
+#What I need to know is that once the action has been defined in line 18, I want it to reflect automatically into the code in line 23 and 24.
+#Example: if the input for line 18 was 1 (ie; group 1), I want lines 23 and 24 to say alphabet_group1
+#Same applies to if the user selects another group.
+
+alphabet_group_menu()
+random_alphabet_group()
